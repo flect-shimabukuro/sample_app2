@@ -7,7 +7,7 @@ box: ruby:2.3.1
 # You can also use services such as databases. Read more on our dev center:
 # http://devcenter.wercker.com/docs/services/index.html
 services:
-    - postgres
+    - id: postgres
       env:
         POSTGRES_PASSWORD: secret_password
     # http://devcenter.wercker.com/docs/services/postgresql.html
