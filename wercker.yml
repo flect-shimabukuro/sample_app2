@@ -28,3 +28,9 @@ build:
         - script:
             name: do test
             code: bundle exec rails test
+
+    after-steps:
+    # notify to Slack
+        - wantedly/pretty-slack-notify:
+          webhook_url: $SLACK_WEBHOOK_URL
+          channel: delivery_support_team
